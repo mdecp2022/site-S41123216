@@ -294,18 +294,86 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/d62b2f493885106af97f0ad20cfcc788/raw/752939275a6204f55373a3932e209819a74bd816/%25E6%258A%25BD%25E9%25BB%259E.py">random call</a></p>
 <h2>w10</h2>
 <p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/bdb8334890e086652ea867a68031703d/raw/ea1ede2d1d6dab937434b68d5db47882dd01b0e4/w10">hw</a></p>
-<p>41123201 缺<br/>41123202 20<br/>41123203 20<br/>41123204 60<br/>41123205 20<br/>41123206 40<br/>41123207 20<br/>41123208 20<br/>41123209 40<br/>41123210 0<br/>41123211 20<br/>41123212 20<br/>41123213 0<br/>41123214 40<br/>41123215 40<br/>41123216 60<br/>41123217 0<br/>41123218 缺<br/>41123219 0<br/>41123220 20<br/>41123221 40<br/>41123222 20<br/>41123223 0<br/>41123224 20<br/>41123225 缺<br/>41123226 20<br/>41123227 20<br/>41123228 缺<br/>41123229 缺<br/>41123230 40<br/>41123231 20<br/>41123232 60<br/>41123233 60<br/>41123234 缺<br/>41123235 40<br/>41123236 缺<br/>41123237 60<br/>41123238 60<br/>41123239 缺<br/>41123240 缺<br/>41123241 60<br/>41123242 40<br/>41123243 缺<br/>41123244 80<br/>41123245 缺<br/>41123246 缺<br/>41123247 0<br/>41123248 40<br/>41123249 40<br/>41123250 缺<br/>41123251 60<br/>====================<br/>以下為 w10 缺考名單:<br/>41123201<br/>41123218<br/>41123225<br/>41123228<br/>41123229<br/>41123234<br/>41123236<br/>41123239<br/>41123240<br/>41123243<br/>41123245<br/>41123246<br/>41123250</p>
+<p><br/>====================<br/>以下為 w10 缺考名單:<br/>41123201<br/>41123218<br/>41123225<br/>41123228<br/>41123229<br/>41123234<br/>41123236<br/>41123239<br/>41123240<br/>41123243<br/>41123245<br/>41123246<br/>41123250</p>
 <h2>w11</h2>
 <p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/48b0ae9265d81939308bda5a3478a14b/raw/95c8cc36d1ddb032cf3c295da4fcdff1c4b0334b/w11">hw</a></p>
-<p>41123201 缺<br/>41123202 40<br/>41123203 40<br/>41123204 20<br/>41123205 0<br/>41123206 20<br/>41123207 20<br/>41123208 20<br/>41123209 20<br/>41123210 20<br/>41123211 40<br/>41123212 40<br/>41123213 20<br/>41123214 0<br/>41123215 60<br/>41123216 60<br/>41123217 0<br/>41123218 缺<br/>41123219 缺<br/>41123220 40<br/>41123221 40<br/>41123222 60<br/>41123223 60<br/>41123224 60<br/>41123225 缺<br/>41123226 60<br/>41123227 40<br/>41123228 60<br/>41123229 60<br/>41123230 40<br/>41123231 20<br/>41123232 40<br/>41123233 40<br/>41123234 20<br/>41123235 60<br/>41123236 60<br/>41123237 60<br/>41123238 40<br/>41123239 0<br/>41123240 缺<br/>41123241 0<br/>41123242 40<br/>41123243 20<br/>41123244 40<br/>41123245 缺<br/>41123246 缺<br/>41123247 40<br/>41123248 0<br/>41123249 40<br/>41123250 40<br/>41123251 80<br/>====================<br/>以下為 w11 缺考名單:<br/>41123201<br/>41123218<br/>41123219<br/>41123225<br/>41123240<br/>41123245<br/>41123246</p>
+<p><br/>====================<br/>以下為 w11 缺考名單:<br/>41123201<br/>41123218<br/>41123219<br/>41123225<br/>41123240<br/>41123245<br/>41123246</p>
 <h2>w12</h2>
 <p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/8a6022d68fea0d05575f8797048c7265/raw/79f9928b1dc31c780c6f276f6d9cdfed4ab70809/%25E6%2594%259D%25E6%25B0%258F%25E8%25BD%2589%25E8%258F%25AF%25E6%25B0%258F">w12hw</a></p>
-<h2>w13</h2>
+<h3>w12-2</h3>
+<!-- 
+在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
+-->
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','/downloads/py/']});
+}
+</script>
+<!-- 以下事先在頁面中加入 id="brython_div" 的 div 標註
+之後可利用 Brython 的 document 模組與此 html 標註對應
+--></p>
+<!-- 利用 html 建立一個 id="btn1" 的按鈕 -->
+<p><button id="btn1">取使用者輸入</button></p>
+<div id="brython_div"></div>
+<p>
+<script type="text/python">
+from browser import html, document, ajax
+# Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+#user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+# 但是在頁面中 Brython 的 print() 將會顯示在 log 而非頁面
+#print(type(user_input_temp))
+# 這裡定義一個 brython_div 變數, 透過 document[] 與頁面中 id="brython_div" 的位置對應
+brython_div = document["brython_div"]
+# 看能不能直接將變數值字串列在標註 id 為 "brython_div" 的頁面位置
+#brython_div <= user_input_temp
+# 之後若要列出 html, 則需要透過 Brython 的 html 模組
+# 接下來要設法按下按鈕之後才執行取使用者 input 的流程
+# 首先 comment 掉前面的 input() 與 print(), 同時蓋掉輸出, 並利用事件導向設計一個函式
+def complete(request):
+    pass
+def get_input(env):
+    user_input_temp = input("請輸入攝氏溫度值:")
+    url = "http://127.0.0.1:8080/?temp=" + user_input_temp
+    ajax.get(url, oncomplete=complete)
+    brython_div <= "已經透過 AJAX 採 GET 將溫度輸入值送到 server"
+    brython_div <= html.BR()
+    brython_div <= user_input_temp
+    brython_div <= html.BR()
+# 透過 Brython browser 模組中的 document 物件將 id="btn1" 的物件中的 bind() 方法
+# 讓使用者 click 後會經由瀏覽器中的 event 通知執行 get_input 函式
+document["btn1"].bind('click', get_input)
+</script>
+</p>
+<!--
+以下為 Flask 伺服器端的程式碼
+from flask import Flask, request 
+from flask_cors import CORS
+  
+app = Flask(__name__)
+CORS(app)
+@app.route('/', methods=['GET'])
+def index():
+    # 利用 Flask request 取得 GET 模式下的 temp 變數值
+    # 若 temp 無值, 則內定為 "30"
+    temp = request.args.get('temp', default="30")
+    # 當使用者在瀏覽器執行 Brython 程式時, 可以利用 GET 將 temp 變數值傳給 server 端的 Flask Python 程式
+    # 若瀏覽器前端採 form 表單取值, 則 Flask 可以 request.form.get() 取值
+    return "已經取得 temp: " + str(temp)
+  
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=8080, debug=True)
+--><h2>w13</h2>
 <p><strong>'''<br/>f=c*9/5+32<br/>c=(f-32)*5/9<br/>'''<br/>c=input("請輸入攝氏溫度值")<br/>print(c,type(c))</strong></p>
 <h2>w14</h2>
 <p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/b660fefcb01768037c3a1e9d05d5c615/raw/a4884d4b912ccb40bb33d54e1656d4694660d22b/w14">hw</a></p>
-<p>41123201 20<br/>41123202 0<br/>41123203 40<br/>41123204 20<br/>41123205 40<br/>41123206 0<br/>41123207 0<br/>41123208 20<br/>41123209 缺<br/>41123210 0<br/>41123211 缺<br/>41123212 60<br/>41123213 40<br/>41123214 20<br/>41123215 20<br/>41123216 60<br/>41123217 0<br/>41123218 缺<br/>41123219 缺<br/>41123220 0<br/>41123221 40<br/>41123222 20<br/>41123223 20<br/>41123224 0<br/>41123225 缺<br/>41123226 0<br/>41123227 缺<br/>41123228 缺<br/>41123229 20<br/>41123230 0<br/>41123231 0<br/>41123232 缺<br/>41123233 20<br/>41123234 0<br/>41123235 40<br/>41123236 缺<br/>41123237 20<br/>41123238 0<br/>41123239 0<br/>41123240 缺<br/>41123241 0<br/>41123242 60<br/>41123243 0<br/>41123244 20<br/>41123245 60<br/>41123246 40<br/>41123247 缺<br/>41123248 40<br/>41123249 20<br/>41123250 20<br/>41123251 40<br/>====================<br/>以下為 w14 缺考名單:<br/>41123209<br/>41123211<br/>41123218<br/>41123219<br/>41123225<br/>41123227<br/>41123228<br/>41123232<br/>41123236<br/>41123240<br/>41123247</p>
-<p><strong></strong></p><h1>cp2022</h1>
+<p><br/>====================<br/>以下為 w14 缺考名單:<br/>41123209<br/>41123211<br/>41123218<br/>41123219<br/>41123225<br/>41123227<br/>41123228<br/>41123232<br/>41123236<br/>41123240<br/>41123247</p>
+<p><strong></strong></p>
+<h1>cp2022</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
