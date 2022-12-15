@@ -130,7 +130,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='關於.html'>關於</a><li><a href='cp2022.html'>cp2022</a><li><a href='Brython.html'>Brython</a><li class='has-children'><a href='HW.html'>HW</a><ul class='dropdown'><li><a href='w5.html'>w5</a><li><a href='w6.html'>w6</a><li><a href='w10.html'>w10</a><li><a href='w11.html'>w11</a><li><a href='w12.html'>w12</a></li>
+                     <li><a href='Brython.html'>Brython</a><li class='has-children'><a href='HW.html'>HW</a><ul class='dropdown'><li><a href='w5.html'>w5</a><li><a href='w6.html'>w6</a><li class='has-children'><a href='w10.html'>w10</a><ul class='dropdown'><li><a href='w10-2.html'>w10-2</a></li></ul><li><a href='w11.html'>w11</a><li class='has-children'><a href='w12.html'>w12</a><ul class='dropdown'><li><a href='w12-1.html'>w12-1</a></li></ul><li><a href='w13.html'>w13</a><li><a href='w14.html'>w14</a><li><a href='w15.html'>w15</a></li></ul><li><a href='cp2022.html'>cp2022</a></li>
                       </ul>
                 </nav>
               </div>
@@ -141,8 +141,68 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w11 << <a href='w11.html'>Previous</a> <br /><h1>w12</h1>
-<p></p><br />w11 << <a href='w11.html'>Previous</a> </div>
+    <div id="tipue_search_content">w11 << <a href='w11.html'>Previous</a> <a href='w12-1.html'>Next</a> >> w12-1<br /><h1>w12</h1>
+<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/8a6022d68fea0d05575f8797048c7265/raw/79f9928b1dc31c780c6f276f6d9cdfed4ab70809/%25E6%2594%259D%25E6%25B0%258F%25E8%25BD%2589%25E8%258F%25AF%25E6%25B0%258F">w12hw</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''
+f = c*9/5 + 32
+c = (f-32)*5/9
+'''
+c = input("請輸入攝氏溫度值")
+c = float(c)
+#print(c, type(c))
+f=c*9/5+32
+print(c,f)</pre>
+<p>
+<script type="text/python">
+from browser import html, document, ajax
+# Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+#user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+# 但是在頁面中 Brython 的 print() 將會顯示在 log 而非頁面
+#print(type(user_input_temp))
+# 這裡定義一個 brython_div 變數, 透過 document[] 與頁面中 id="brython_div" 的位置對應
+brython_div = document["brython_div"]
+# 看能不能直接將變數值字串列在標註 id 為 "brython_div" 的頁面位置
+#brython_div <= user_input_temp
+# 之後若要列出 html, 則需要透過 Brython 的 html 模組
+# 接下來要設法按下按鈕之後才執行取使用者 input 的流程
+# 首先 comment 掉前面的 input() 與 print(), 同時蓋掉輸出, 並利用事件導向設計一個函式
+def complete(request):
+    pass
+def get_input(env):
+    user_input_temp = input("請輸入攝氏溫度值:")
+    url = "http://127.0.0.1:8080/?temp=" + user_input_temp
+    ajax.get(url, oncomplete=complete)
+    brython_div <= "已經透過 AJAX 採 GET 將溫度輸入值送到 server"
+    brython_div <= html.BR()
+    brython_div <= user_input_temp
+    brython_div <= html.BR()
+# 透過 Brython browser 模組中的 document 物件將 id="btn1" 的物件中的 bind() 方法
+# 讓使用者 click 後會經由瀏覽器中的 event 通知執行 get_input 函式
+document["btn1"].bind('click', get_input)
+</script>
+</p>
+<!--
+以下為 Flask 伺服器端的程式碼
+from flask import Flask, request 
+from flask_cors import CORS
+  
+app = Flask(__name__)
+CORS(app)
+@app.route('/', methods=['GET'])
+def index():
+    # 利用 Flask request 取得 GET 模式下的 temp 變數值
+    # 若 temp 無值, 則內定為 "30"
+    temp = request.args.get('temp', default="30")
+    # 當使用者在瀏覽器執行 Brython 程式時, 可以利用 GET 將 temp 變數值傳給 server 端的 Flask Python 程式
+    # 若瀏覽器前端採 form 表單取值, 則 Flask 可以 request.form.get() 取值
+    return "已經取得 temp: " + str(temp)
+  
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=8080, debug=True)
+-->
+<p></p>
+<br />w11 << <a href='w11.html'>Previous</a> <a href='w12-1.html'>Next</a> >> w12-1</div>
         
     <!-- footer -->
       <div class="container">
