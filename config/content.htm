@@ -293,32 +293,26 @@ doc["threejsblock"].bind("click", threejsblock.do)
 </div>
 <p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/d62b2f493885106af97f0ad20cfcc788/raw/752939275a6204f55373a3932e209819a74bd816/%25E6%258A%25BD%25E9%25BB%259E.py">random call</a></p>
 <h2>w10</h2>
-<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/bdb8334890e086652ea867a68031703d/raw/ea1ede2d1d6dab937434b68d5db47882dd01b0e4/w10">hw</a></p>
-<p><br/>====================<br/>以下為 w10 缺考名單:<br/>41123201<br/>41123218<br/>41123225<br/>41123228<br/>41123229<br/>41123234<br/>41123236<br/>41123239<br/>41123240<br/>41123243<br/>41123245<br/>41123246<br/>41123250</p>
+<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/bdb8334890e086652ea867a68031703d/raw/ea1ede2d1d6dab937434b68d5db47882dd01b0e4/w10">w10hw</a></p>
+<p>====================<br/>以下為 w10 缺考名單:<br/>41123201<br/>41123218<br/>41123225<br/>41123228<br/>41123229<br/>41123234<br/>41123236<br/>41123239<br/>41123240<br/>41123243<br/>41123245<br/>41123246<br/>41123250</p><h3>w10-2</h3>
+<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/1ce4c5915d8d56dbbd86a2bc6ce8cf23/raw/b033fe945c58edff5169d918c0b151c92a736ede/w10-2">1~10 <span class="Y2IQFc" lang="en">odd number</span></a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 10, 2):
+    print(i,end=" ")</pre>
+<p></p>
 <h2>w11</h2>
-<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/48b0ae9265d81939308bda5a3478a14b/raw/95c8cc36d1ddb032cf3c295da4fcdff1c4b0334b/w11">hw</a></p>
+<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/48b0ae9265d81939308bda5a3478a14b/raw/95c8cc36d1ddb032cf3c295da4fcdff1c4b0334b/w11">w11hw</a></p>
 <p><br/>====================<br/>以下為 w11 缺考名單:<br/>41123201<br/>41123218<br/>41123219<br/>41123225<br/>41123240<br/>41123245<br/>41123246</p>
 <h2>w12</h2>
 <p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/8a6022d68fea0d05575f8797048c7265/raw/79f9928b1dc31c780c6f276f6d9cdfed4ab70809/%25E6%2594%259D%25E6%25B0%258F%25E8%25BD%2589%25E8%258F%25AF%25E6%25B0%258F">w12hw</a></p>
-<h3>w12-2</h3>
-<!-- 
-在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
--->
-<script src="/static/brython.js"></script>
-<script src="/static/brython_stdlib.js"></script>
-<!-- 啟動 Brython -->
-<p>
-<script>
-window.onload=function(){
-brython({debug:1, pythonpath:['/static/','/downloads/py/']});
-}
-</script>
-<!-- 以下事先在頁面中加入 id="brython_div" 的 div 標註
-之後可利用 Brython 的 document 模組與此 html 標註對應
---></p>
-<!-- 利用 html 建立一個 id="btn1" 的按鈕 -->
-<p><button id="btn1">取使用者輸入</button></p>
-<div id="brython_div"></div>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''
+f = c*9/5 + 32
+c = (f-32)*5/9
+'''
+c = input("請輸入攝氏溫度值")
+c = float(c)
+#print(c, type(c))
+f=c*9/5+32
+print(c,f)</pre>
 <p>
 <script type="text/python">
 from browser import html, document, ajax
@@ -367,11 +361,104 @@ def index():
   
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
---><h2>w13</h2>
-<p><strong>'''<br/>f=c*9/5+32<br/>c=(f-32)*5/9<br/>'''<br/>c=input("請輸入攝氏溫度值")<br/>print(c,type(c))</strong></p>
-<h2>w14</h2>
-<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/b660fefcb01768037c3a1e9d05d5c615/raw/a4884d4b912ccb40bb33d54e1656d4694660d22b/w14">hw</a></p>
-<p><br/>====================<br/>以下為 w14 缺考名單:<br/>41123209<br/>41123211<br/>41123218<br/>41123219<br/>41123225<br/>41123227<br/>41123228<br/>41123232<br/>41123236<br/>41123240<br/>41123247</p>
+-->
+<p></p>
+<h3>w12-1</h3>
+<!-- 
+在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
+-->
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','/downloads/py/']});
+}
+</script>
+<!-- 以下事先在頁面中加入 id="brython_div" 的 div 標註
+之後可利用 Brython 的 document 模組與此 html 標註對應
+--></p>
+<!-- 利用 html 建立一個 id="btn1" 的按鈕 -->
+<p><button id="btn1">輸入攝氏度</button></p>
+<div id="brython_div"></div>
+<p>
+<script type="text/python">
+from browser import html, document
+# Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+#user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+# 但是在頁面中 Brython 的 print() 將會顯示在 log 而非頁面
+#print(type(user_input_temp))
+# 這裡定義一個 brython_div 變數, 透過 document[] 與頁面中 id="brython_div" 的位置對應
+brython_div = document["brython_div"]
+# 看能不能直接將變數值字串列在標註 id 為 "brython_div" 的頁面位置
+#brython_div <= user_input_temp
+# 之後若要列出 html, 則需要透過 Brython 的 html 模組
+# 接下來要設法按下按鈕之後才執行取使用者 input 的流程
+# 首先 comment 掉前面的 input() 與 print(), 同時蓋掉輸出, 並利用事件導向設計一個函式
+def get_input(env):
+    user_input_temp = input("請輸入攝氏溫度值:")
+    brython_div <= user_input_temp
+# 透過 Brython browser 模組中的 document 物件將 id="btn1" 的物件中的 bind() 方法
+# 讓使用者 click 後會經由瀏覽器中的 event 通知執行 get_input 函式
+document["btn1"].bind('click', get_input)
+</script>
+</p>
+<h2>w13</h2>
+<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/406d873f93b994ceb0efe39e16369950/raw/2258883030400588fe67dbf2c7b5b8c1412b8624/password_genrator.py"><span style="vertical-align: inherit;">password generator.py</span></a></p>
+<div>
+<pre><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/05b4127a69e8f385fafb39a7fde428ce/raw/8c45a3cef17116c18ca3e632ef2478e075e83f59/ssr">Fetch personal page</a></pre>
+</div>
+<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/d62b2f493885106af97f0ad20cfcc788/raw/752939275a6204f55373a3932e209819a74bd816/%25E6%258A%25BD%25E9%25BB%259E.py">random call</a></p>
+<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/bdb8334890e086652ea867a68031703d/raw/ea1ede2d1d6dab937434b68d5db47882dd01b0e4/w10">w10hw</a></p>
+<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/48b0ae9265d81939308bda5a3478a14b/raw/95c8cc36d1ddb032cf3c295da4fcdff1c4b0334b/w11">w11hw</a></p>
+<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/8a6022d68fea0d05575f8797048c7265/raw/79f9928b1dc31c780c6f276f6d9cdfed4ab70809/%25E6%2594%259D%25E6%25B0%258F%25E8%25BD%2589%25E8%258F%25AF%25E6%25B0%258F">w12hw</a></p>
+<!-- 
+在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
+-->
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','/downloads/py/']});
+}
+</script>
+<!-- 以下事先在頁面中加入 id="brython_div" 的 div 標註
+之後可利用 Brython 的 document 模組與此 html 標註對應
+--></p>
+<!-- 利用 html 建立一個 id="btn1" 的按鈕 -->
+<p><button id="btn1">取使用者輸入</button></p>
+<div id="brython_div"></div>
+<p>
+<script type="text/python">
+from browser import html, document
+# Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+#user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+# 但是在頁面中 Brython 的 print() 將會顯示在 log 而非頁面
+#print(type(user_input_temp))
+# 這裡定義一個 brython_div 變數, 透過 document[] 與頁面中 id="brython_div" 的位置對應
+brython_div = document["brython_div"]
+# 看能不能直接將變數值字串列在標註 id 為 "brython_div" 的頁面位置
+#brython_div <= user_input_temp
+# 之後若要列出 html, 則需要透過 Brython 的 html 模組
+# 接下來要設法按下按鈕之後才執行取使用者 input 的流程
+# 首先 comment 掉前面的 input() 與 print(), 同時蓋掉輸出, 並利用事件導向設計一個函式
+def get_input(env):
+    user_input_temp = input("請輸入攝氏溫度值:")
+    brython_div <= user_input_temp
+# 透過 Brython browser 模組中的 document 物件將 id="btn1" 的物件中的 bind() 方法
+# 讓使用者 click 後會經由瀏覽器中的 event 通知執行 get_input 函式
+document["btn1"].bind('click', get_input)
+</script>
+</p>
+<p></p>
+<p><br/><br/></p><h2>w14</h2>
+<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/b660fefcb01768037c3a1e9d05d5c615/raw/a4884d4b912ccb40bb33d54e1656d4694660d22b/w14">w14hw</a></p>
+<p>====================<br/>以下為 w14 缺考名單:<br/>41123209<br/>41123211<br/>41123218<br/>41123219<br/>41123225<br/>41123227<br/>41123228<br/>41123232<br/>41123236<br/>41123240<br/>41123247</p>
 <p><strong></strong></p>
 <h1>cp2022</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
