@@ -289,14 +289,54 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <h1>HW</h1>
 <h2>w5</h2>
 <p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/406d873f93b994ceb0efe39e16369950/raw/2258883030400588fe67dbf2c7b5b8c1412b8624/password_genrator.py"><span style="vertical-align: inherit;">password generator.py</span></a></p>
-<h2>w6</h2>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 導入亂數模組
+import random
+# 導入字串模組
+import string
+# 利用 def 關鍵字定義函式
+# 函式的輸入變數可以設定初始值
+def password_generator(size=4, chars=string.ascii_lowercase + string.digits):
+    # 函式內以多行註解說明函式功能
+    """Generate random password
+    """
+    # 利用 return 關鍵字將所產生的亂數字串傳回
+    return ''.join(random.choice(chars) for _ in range(size))
+# 建立一個變數與隨後的字串對應
+pass_string = "abcdefghkmnpqrstuwxyz123456789"
+# 利用重複迴圈呼叫 password_generator() 函式 10 次
+for i in range(10):
+    print(password_generator(4, pass_string))</pre>
+<p></p><h2>w6</h2>
 <div>
-<pre><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/05b4127a69e8f385fafb39a7fde428ce/raw/8c45a3cef17116c18ca3e632ef2478e075e83f59/ssr">Fetch personal page</a></pre>
+<pre><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/05b4127a69e8f385fafb39a7fde428ce/raw/8c45a3cef17116c18ca3e632ef2478e075e83f59/ssr">Fetch personal page<br/></a></pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
+
+brython_div1 = document["brython_div1"]
+"""
+brython_div1 &lt;= html.BUTTON("hello")
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= html.A("google", href="https://google.com")
+"""
+
+url = "https://mde.tw/studlist/2022fall/1b.txt"
+data = open(url).read().split("\n")
+mdecp2022 = "https://mdecp2022.github.io/site-"
+data = data[1:-1]
+for i in data:
+    stud = i.split("\t")
+    stud_num = stud[0]
+    github_acc = stud[1]
+    #print(stud_num, github_acc)
+    if github_acc == "":
+        github_acc = stud_num
+    site = mdecp2022 + github_acc
+    link = html.A(stud_num, href=site)
+    brython_div1 &lt;= link
+    brython_div1 &lt;= html.BR()</pre>
 </div>
-<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/d62b2f493885106af97f0ad20cfcc788/raw/752939275a6204f55373a3932e209819a74bd816/%25E6%258A%25BD%25E9%25BB%259E.py">random call</a></p>
-<h2>w10</h2>
+<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/d62b2f493885106af97f0ad20cfcc788/raw/752939275a6204f55373a3932e209819a74bd816/%25E6%258A%25BD%25E9%25BB%259E.py">random call</a></p><h2>w10</h2>
 <p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/bdb8334890e086652ea867a68031703d/raw/ea1ede2d1d6dab937434b68d5db47882dd01b0e4/w10">w10hw</a></p>
-<p>====================<br/>以下為 w10 缺考名單:<br/>41123201<br/>41123218<br/>41123225<br/>41123228<br/>41123229<br/>41123234<br/>41123236<br/>41123239<br/>41123240<br/>41123243<br/>41123245<br/>41123246<br/>41123250</p>
+<p>====================<br/>以下為 w10 缺考名單:<br/>41123201<br/>41123218<br/>41123225<br/>41123228<br/>41123229<br/>41123234<br>41123236<br/>41123239<br/>41123240<br/>41123243<br/>41123245<br/>41123246<br/>41123250</br></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 導入 ast 模組是希望利用其 literal_eval() 將 dict 格式的字串轉為 dict 資料型別
 # 以利隨後的取值運算
 import ast
@@ -540,35 +580,7 @@ def get_input(env):
 document["btn1"].bind('click', get_input)
 </script>
 </p>
-<h2>w13</h2>
-<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/406d873f93b994ceb0efe39e16369950/raw/2258883030400588fe67dbf2c7b5b8c1412b8624/password_genrator.py"><span style="vertical-align: inherit;">password generator.py</span></a></p>
-<div>
-<pre><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/05b4127a69e8f385fafb39a7fde428ce/raw/8c45a3cef17116c18ca3e632ef2478e075e83f59/ssr">Fetch personal page</a></pre>
-</div>
-<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/d62b2f493885106af97f0ad20cfcc788/raw/752939275a6204f55373a3932e209819a74bd816/%25E6%258A%25BD%25E9%25BB%259E.py">random call</a></p>
-<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/bdb8334890e086652ea867a68031703d/raw/ea1ede2d1d6dab937434b68d5db47882dd01b0e4/w10">w10hw</a></p>
-<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/48b0ae9265d81939308bda5a3478a14b/raw/95c8cc36d1ddb032cf3c295da4fcdff1c4b0334b/w11">w11hw</a></p>
-<p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/8a6022d68fea0d05575f8797048c7265/raw/79f9928b1dc31c780c6f276f6d9cdfed4ab70809/%25E6%2594%259D%25E6%25B0%258F%25E8%25BD%2589%25E8%258F%25AF%25E6%25B0%258F">w12hw</a></p>
-<!-- 
-在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
--->
-<p>
-<script src="/static/brython.js"></script>
-<script src="/static/brython_stdlib.js"></script>
-</p>
-<!-- 啟動 Brython -->
-<p>
-<script>
-window.onload=function(){
-brython({debug:1, pythonpath:['/static/','/downloads/py/']});
-}
-</script>
-<!-- 以下事先在頁面中加入 id="brython_div" 的 div 標註
-之後可利用 Brython 的 document 模組與此 html 標註對應
---></p>
-<!-- 利用 html 建立一個 id="btn1" 的按鈕 -->
-<p><button id="btn1">取使用者輸入</button></p>
-<div id="brython_div"></div>
+<p></p>
 <p>
 <script type="text/python">
 from browser import html, document
@@ -593,8 +605,7 @@ document["btn1"].bind('click', get_input)
 </script>
 </p>
 <p></p>
-<p><br/><br/></p>
-<h2>w14</h2>
+<p><br/><br/></p><h2>w14</h2>
 <p><a href="https://mdecp2022.github.io/site-S41123216/content/cp2022.html?src=https://gist.githubusercontent.com/S41123216/b660fefcb01768037c3a1e9d05d5c615/raw/a4884d4b912ccb40bb33d54e1656d4694660d22b/w14">w14hw</a></p>
 <p>====================<br/>以下為 w14 缺考名單:<br/>41123209<br/>41123211<br/>41123218<br/>41123219<br/>41123225<br/>41123227<br/>41123228<br/>41123232<br/>41123236<br/>41123240<br/>41123247</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># 導入 ast 模組是希望利用其 literal_eval() 將 dict 格式的字串轉為 dict 資料型別
